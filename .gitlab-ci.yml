@@ -4,6 +4,8 @@
 image: java:8
 
 before_script:
+  # Update sources list to fix "Failed to fetch" error
+  - printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
   # Enable the usage of sources over https
   - apt-get update -yqq
   - apt-get install apt-transport-https -yqq
