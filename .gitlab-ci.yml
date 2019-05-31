@@ -8,6 +8,7 @@ before_script:
   - printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list.d/jessie-backports.list
   - cat /etc/apt/sources.list 
   - cat /etc/apt/sources.list.d/jessie-backports.list
+  - cat /etc/os-release
   # Enable the usage of sources over https
   - apt-get update -yqq
   - apt-get install apt-transport-https -yqq
