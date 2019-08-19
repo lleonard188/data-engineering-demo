@@ -23,3 +23,9 @@ test:
   script:
     # Execute your project's tests
     - sbt clean test
+
+deploy_prod:
+  script:
+    - echo "Deploy to production server"
+  only:
+  - master
