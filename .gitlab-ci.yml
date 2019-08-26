@@ -27,5 +27,8 @@ test:
 deploy_prod:
   script:
     - echo "Deploy to production server"
+  environment:
+    name: prod
+    url : https://104.197.207.13
   only:
   - master
